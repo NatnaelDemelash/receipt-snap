@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <section className="max-w-5xl mx-auto px-5 py-16 md:py-24">
-      {/* Main Heading - simple, no gradients */}
+      {/* Main Heading */}
       <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-center text-gray-900 leading-tight">
         Stop typing,
         <br />
@@ -19,16 +19,43 @@ export default function Hero() {
         Turn your paper mess into a clean CSV in seconds.
       </p>
 
-      {/* Buttons */}
+      {/* Buttons with icons */}
       <div className="flex flex-col sm:flex-row justify-center gap-3 mt-8">
-        <button className="px-6 py-2.5 bg-gray-900 text-white rounded-md text-base hover:bg-gray-800 transition">
+        <button className="px-6 py-2.5 bg-gray-900 text-white rounded-md text-base hover:bg-gray-800 transition flex items-center justify-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+            <circle cx="12" cy="13" r="4" />
+          </svg>
           Get Started Free
         </button>
 
         <button
           onClick={() => setIsDemoPlaying(true)}
-          className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-md text-base hover:bg-gray-50 transition"
+          className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-md text-base hover:bg-gray-50 transition flex items-center justify-center gap-2"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polygon points="5 3 19 12 5 21 5 3" />
+          </svg>
           Watch Demo
         </button>
       </div>
@@ -81,7 +108,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Preview card - plain and functional */}
+      {/* Receipt Preview Card - kept as you loved it */}
       <div className="mt-12 max-w-2xl mx-auto">
         <div className="border border-gray-200 rounded-lg overflow-hidden bg-white">
           <div className="bg-gray-50 px-4 py-2 border-b border-gray-200 flex items-center gap-2">

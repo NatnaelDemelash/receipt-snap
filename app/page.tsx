@@ -2,41 +2,47 @@ import Hero from '@/components/Hero';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main>
       <Hero />
 
-      {/* Optional: Add a simple feature section to demonstrate completeness */}
-      <section className="max-w-6xl mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900">How it works</h2>
-          <p className="text-gray-500 mt-2">
-            Three simple steps to go from paper to data
-          </p>
+      {/* How it works section - clean and simple */}
+      <section className="max-w-5xl mx-auto px-5 py-16 border-t border-gray-100">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl font-semibold text-gray-900">How it works</h2>
+          <p className="text-gray-500 text-sm mt-1">Three steps, zero typing</p>
         </div>
+
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">📸</span>
+          {/* Step 1 */}
+          <div className="text-center">
+            <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-mono">
+              1
             </div>
-            <h3 className="font-semibold text-lg mb-2">1. Snap</h3>
-            <p className="text-gray-500 text-sm">Take a photo of any receipt</p>
-          </div>
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">🤖</span>
-            </div>
-            <h3 className="font-semibold text-lg mb-2">2. Extract</h3>
-            <p className="text-gray-500 text-sm">
-              AI reads store, date, amount, tax
+            <h3 className="font-medium text-gray-900 mb-1">Snap a photo</h3>
+            <p className="text-sm text-gray-500">
+              Take a picture of any receipt
             </p>
           </div>
-          <div className="text-center p-6">
-            <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl">📊</span>
+
+          {/* Step 2 */}
+          <div className="text-center">
+            <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-mono">
+              2
             </div>
-            <h3 className="font-semibold text-lg mb-2">3. Export</h3>
-            <p className="text-gray-500 text-sm">
-              Download clean CSV instantly
+            <h3 className="font-medium text-gray-900 mb-1">AI extracts data</h3>
+            <p className="text-sm text-gray-500">
+              Store, date, amount, tax — automatically
+            </p>
+          </div>
+
+          {/* Step 3 */}
+          <div className="text-center">
+            <div className="w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-sm font-mono">
+              3
+            </div>
+            <h3 className="font-medium text-gray-900 mb-1">Export to CSV</h3>
+            <p className="text-sm text-gray-500">
+              Clean spreadsheet, ready for accounting
             </p>
           </div>
         </div>
