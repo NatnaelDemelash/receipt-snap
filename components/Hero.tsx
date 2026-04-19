@@ -1,9 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Hero() {
+  const router = useRouter();
   const [isDemoPlaying, setIsDemoPlaying] = useState(false);
+
+  const goToUploadPage = () => {
+    router.push('/upload');
+  };
 
   return (
     <section className="max-w-5xl mx-auto px-5 py-16 md:py-24">
@@ -21,7 +27,10 @@ export default function Hero() {
 
       {/* Buttons with icons */}
       <div className="flex flex-col sm:flex-row justify-center gap-3 mt-8">
-        <button className="px-6 py-2.5 bg-gray-900 text-white rounded-md text-base hover:bg-gray-800 transition flex items-center justify-center gap-2">
+        <button
+          className="px-6 py-2.5 bg-gray-900 text-white rounded-md text-base hover:bg-gray-800 transition flex items-center justify-center gap-2"
+          onClick={goToUploadPage}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
