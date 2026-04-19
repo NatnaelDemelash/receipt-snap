@@ -1,22 +1,18 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const jetbrainsMono = JetBrains_Mono({
+  variable: '--font-jetbrains-mono',
   subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
-  title: 'ReceiptSnap - Turn receipts into data instantly',
+  title: 'ReceiptSnap - Turn receipts into data',
   description:
-    'Stop typing, start snapping. AI-powered OCR that turns paper receipts into clean CSV in seconds.',
+    'Stop typing, start snapping. Turn paper receipts into clean CSV in seconds.',
 };
 
 export default function RootLayout({
@@ -25,16 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-      suppressHydrationWarning
-    >
-      <body className="min-h-full flex flex-col bg-gradient-to-br from-white via-gray-50 to-gray-100">
+    <html lang="en" className={`${jetbrainsMono.variable} h-full`}>
+      <body className="min-h-full flex flex-col bg-white">
         <Navbar />
         <main className="flex-1">{children}</main>
-        <footer className="py-8 text-center text-sm text-gray-400 border-t border-gray-200">
-          <p>© 2026 ReceiptSnap — Stop typing, start snapping.</p>
+        <footer className="py-6 text-center text-[10px] text-gray-400 border-t border-gray-200 uppercase tracking-wide">
+          <p>© 2026 RECEIPTSNAP — STOP TYPING, START SNAPPING.</p>
         </footer>
       </body>
     </html>
